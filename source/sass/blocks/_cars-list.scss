@@ -1,0 +1,62 @@
+.cars-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32.9rem, 1fr));
+  grid-gap: max(1vw, 7px);
+  margin-top: max(3.375vw, 1.5rem);
+  &__item {
+    box-shadow: 5px 5px 50px 0px hsla(0, 0%, 0%, 0.14);
+    padding: max(1.6875vw, 14px) clamp(13px, 1.625vw, 26px) clamp(18px, 2.1875vw, 35px);
+  }
+  &__name {
+    margin-top: max(1.5vw, 12.5px);
+    font-size: clamp(13px, 1.5625vw, 25px);
+    font-weight: 700;
+    line-height: 120%;
+  }
+  &__price {
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: clamp(13px, 1.5625vw, 25px);
+    span {
+      color: var(--clr-red);
+    }
+  }
+  &__check {
+    width: 100%;
+    outline: 1px solid var(--clr-red);
+    margin-top: max(1.9375vw, 1rem);
+    padding: var(--30-spc) 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(11px, 1.375vw, 31px);
+    color: var(--clr-red);
+    @include max-media(66em) {
+      padding: 1rem 0;
+    }
+  }
+  &__image {
+    max-height: 17.875rem;
+    width: 100%;
+    overflow: hidden;
+    img, picture {
+      width: inherit;
+      pointer-events: none;
+      max-height: inherit;
+    }
+  }
+}
+
+@include max-media(34.375em) {
+  .cars-list {
+    grid-template-columns: 100%;
+  }
+  .purchased {
+    &__container {
+      padding: 0 18px;
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+.express-list {
+  margin-top: max(3.125vw, 20px);
+  --item-shadow: 2.0254218578338623px 2.0254218578338623px 10.127108573913574px 0px hsla(0, 0%, 0%, 0.13);
+  &__item {
+    box-shadow: var(--item-shadow);
+    padding: 0 12px;
+    &:nth-child(1) {
+      p {
+        max-width: 28.25rem;
+      }
+    }
+  }
+  &__descr {
+    p {
+      font-size: clamp(11px, 1.25vw, 20px);
+      line-height: 120%;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    min-height: 9.875rem;
+    grid-gap: max(1.875vw, 10px);
+  }
+  &__icon {
+    width: 12.5rem;
+    @include max-media(75em) {
+      width: 5.3125rem;
+    }
+    img,
+    picture {
+      width: inherit;
+    }
+  }
+}
+
+@include max-media(35em) {
+  .express-list {
+    &__inner {
+      min-height: 5.5rem;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+:root {
+  --ff: 'Montserrat', sans-serif;
+  // COLOR
+  --clr-white: hsla(0, 0%, 100%, 1);
+  --clr-red: hsla(3, 100%, 59%, 1);
+  --clr-black: hsla(0, 0%, 0%, 1);
+  --shadow-red: 5.824742317199707px 5.824742317199707px 23.298969268798828px 0px hsla(3, 100%, 59%, 0.65);
+  --shadow-light: 2.0254218578338623px 2.0254218578338623px 10.127108573913574px 0px hsla(0, 0%, 0%, 0.13);
+  --shadow-inner: 5px 5px 20px 0px hsla(0, 0%, 0%, 0.25) inset;
+  // SPACING
+  --45-spc: 2.8125rem;
+  --30-spc: 1.875rem;
+  --28-spc: 1.75rem;
+  --12-spc: 0.75rem;
+  --20-spc: 1.25rem;
+  --16-spc: 1rem;
+}
+
+._container {
+  max-width: 104.8125rem;
+  padding: 0 clamp(0.625rem, 1.25vw, 20px);
+  margin-inline: auto;
+  @include max-media(68.75em) {
+    max-width: 37.5rem;
+  }
+}
+
+._def-btn {
+  padding: var(--30-spc);
+  font-size: 1.375rem;
+  font-weight: 700;
+  background-color: var(--clr-red);
+  color: var(--clr-white);
+  box-shadow: var(--shadow-red);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include max-media(35em) {
+    font-size: 13px !important;
+    padding: 24px;
+    min-width: 100%;
+  }
+}
+
+
+
+
+
+

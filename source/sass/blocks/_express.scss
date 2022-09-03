@@ -1,0 +1,53 @@
+.express {
+  padding: 3rem 0 clamp(42px, 4.0625vw, 65px);
+  &__container {
+    max-width: 112.875rem;
+  }
+  &__heading {
+    font-size: clamp(0.9375rem, 2.5vw, 40px);
+    font-weight: 400;
+    max-width: 47.75rem;
+    span {
+      font-weight: 700;
+      color: var(--clr-red);
+    }
+  }
+  &__image {
+    img,
+    picture {
+      height: 100%;
+    }
+  }
+  &__offer {
+    font-size: clamp(15px, 2.3125vw, 37px);
+    font-weight: 900;
+    span {
+      color: var(--clr-red);
+    }
+  }
+  &__column {
+    display: grid;
+    grid-template-columns: 0.75fr .9fr;
+    grid-gap: 3px;
+  }
+}
+
+@include max-media(53.125em) {
+  .express {
+    &__container {
+      max-width: 37.5rem;
+    }
+    &__column {
+      grid-template-columns: 100%;
+    }
+    &__image {
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      width: 100vw;
+      position: relative;
+    }
+  }
+}

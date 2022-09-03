@@ -1,0 +1,37 @@
+.purchased {
+  background: hsla(0, 0%, 100%, 1);
+  &__heading {
+    font-size: clamp(17px, 2.8125vw, 45px);
+    font-weight: 900;
+    span {
+      background-color: var(--clr-red);
+      color: var(--clr-white);
+      padding-left: var(--16-spc);
+    }
+  }
+  &__button {
+  margin-top: clamp(1rem, 3.875vw, 62px);
+  display: grid;
+  justify-content: center;
+  }
+  &__more {
+    font-size: 22px;
+    min-width: 33.8125rem;
+
+  }
+}
+
+@include max-media(34.375em) {
+  .purchased {
+    &__button {
+      grid-template-columns: 100%;
+    }
+    &__more {
+      min-width: 100%;
+    }
+  }
+}
+
+
+
+
