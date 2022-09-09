@@ -1,0 +1,117 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  padding: 9px 0px;
+  background-color: var(--clr-white);
+  &__container {
+    max-width: 107.0625rem;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    @include al-flex;
+    justify-content: space-between;
+    padding: clamp(11px, 2.0625vw, 33px) clamp(30px, 6.875vw, 110px);
+  }
+  &__logo {
+    @include al-flex;
+    grid-gap: max(1.375vw, 15px);
+  }
+  &__logo-icon {
+    flex: 1 0 13.5rem;
+  }
+  &__logo-text {
+    p {
+      font-size: clamp(13px, 0.9375vw, 15px);
+    }
+  }
+  &__body {
+    @include al-flex;
+  }
+  &__call-phone {
+    display: flex;
+    flex-direction: column;
+    span {
+      &:nth-child(1) {
+        font-weight: 700;
+        font-size: clamp(15px, 1.5vw, 24px);
+      }
+      &:nth-child(2) {
+        font-size: clamp(12px, 0.9375vw, 15px);
+        color: var(--clr-red);
+      }
+    }
+  }
+}
+
+.header-social {
+  @include al-flex;
+  grid-gap: max(1.25vw, 10px);
+  &__link {
+    &:hover img {
+      transform: scale(1.05);
+    }
+    img {
+      transition: all 400ms ease;
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2.74px;
+  span {
+    background-color: var(--clr-white);
+    display: block;
+    width: 1.625rem;
+    height: 2.74px;
+    border-radius: 4.25rem;
+  }
+}
+
+@include min-media(79.0625em) {
+  .burger {
+    display: none;
+  }
+}
+
+@include max-media(79.0625em) {
+  .home {
+    padding: 65px 0px 0px;
+  }
+  .header {
+    padding: 0;
+    .mob-menu {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 2.74px;
+    }
+    &__container {
+      max-width: 37.5rem;
+      height: 2.5625rem;
+      display: grid;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 1.3rem;
+    }
+    background-color: var(--clr-red);
+    &__body {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    @include al-flex;
+    grid-gap: clamp(10px, 2.8125vw, 45px);
+  }
+  &__link {
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 500;
+  }
+}

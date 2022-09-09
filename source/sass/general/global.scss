@@ -30,10 +30,6 @@ html {
   box-sizing: border-box;
 }
 
-main {
-  padding: clamp(20px, 5.403vw, 67px) 0 clamp(20px, 8.065vw, 100px);
-}
-
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

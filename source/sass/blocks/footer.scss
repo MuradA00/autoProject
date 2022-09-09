@@ -1,3 +1,41 @@
-header {
-  background: url(../img/);
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--clr-white);
+  min-width: 87.5rem;
+  z-index: 50;
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: max(15.0625vw, 7rem);
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    grid-gap: max(2.75vw, 1.5rem);
+    img {
+      width: max(14.125vw, 3rem);
+    }
+  }
+  &__label {
+    max-width: 260px;
+    p {
+      font-size: clamp(12px, 0.9375vw, 15px);
+    }
+  }
+  .footer-nav {
+    &__list {
+      display: flex;
+      align-items: center;
+      grid-gap: max(2.8125vw, 1rem);
+    }
+  }
+}
+
+@include max-media(85.275em) {
+  .footer {
+    display: none;
+  }
 }

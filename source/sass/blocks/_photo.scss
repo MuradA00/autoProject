@@ -1,0 +1,119 @@
+.photo {
+  background-image: url('../../img/photo/photo-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 58.1rem;
+  &__body {
+    padding: clamp(1.125rem, 6.25vw, 102px) 0 clamp(0px, 8.5vw, 136px);
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: max(58.8vw, 25rem);
+    margin-left: auto;
+    position: relative;
+    z-index: 200;
+  }
+  &__heading {
+    p {
+      font-size: clamp(0.9375rem, 2.5vw, 40px);
+      span {
+        color: var(--clr-red);
+        font-weight: 700;
+      }
+    }
+  }
+  &__descr {
+    max-width: 48.125rem;
+    margin-top: max(1.375vw, 17px);
+    p {
+      font-size: clamp(12px, 1.5625vw, 25px);
+    }
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: max(48.125vw, 30rem);
+    img, picture {
+      height: 100%;
+    }
+  }
+  &__subinfo {
+    margin-top: max(1.375vw, 23px);
+    p {
+      font-size: clamp(12px, 1.5625vw, 25px);
+    }
+  }
+}
+
+.social {
+  margin-top: max(3.625vw, 23px);
+  display: flex;
+  align-items: center;
+  grid-gap: max(1.75vw, 0.8125rem);
+  &__item {
+    width: max(11.0625vw, 5.5rem);
+    flex: 0 1 11.0625rem;
+  }
+  &__link {
+    &:hover img {
+      transform: scale(1.03);
+    }
+    img {
+      transition: transform 300ms ease;
+    }
+  }
+}
+
+@include max-media(85.275em) {
+  .social {
+    justify-content: center;
+  }
+  .photo {
+    min-height: auto;
+    &__image {
+      position: relative;
+      width: auto;
+    }
+    &__info {
+      margin-inline: auto;
+      width: auto;
+    }
+    &__body {
+      grid-gap: 23px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: clamp(1.125rem, 6.25vw, 102px) 0 0;
+    }
+  }
+}
+
+@include max-media(56.25em) {
+  .social {
+    &__item {
+      width: 5rem;
+      flex: 0 1 auto;
+    }
+  }
+}
+
+@include max-media(43.75em) {
+  .photo {
+    &__image {
+      max-width: 21.8rem;
+    }
+  }
+}
+
+@include max-media(31.25em) {
+  .photo {
+    &__image {
+      height: 15.5rem;
+      max-width: 14.375rem;
+    }
+  }
+}

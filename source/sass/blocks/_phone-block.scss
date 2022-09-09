@@ -1,0 +1,37 @@
+.phone-block {
+  position: fixed;
+  right: max(5.6875vw, 2rem);
+  z-index: 9999;
+  bottom: max(4.6875vw, 1rem);
+  cursor: pointer;
+  transition: transform 400ms ease;
+  &:hover {
+    transform: translateY(-1rem);
+  }
+  &__inner {
+    background-color: var(--clr-white);
+    border-radius: 50%;
+    max-width: 9.6875rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 2rem;
+    box-shadow: 5px 5px 20px 0px hsla(0, 0%, 0%, 0.25);
+  }
+}
+
+
+@include max-media(56.25em) {
+  .phone-block {
+    &__inner {
+      max-width: 4.25rem;
+      padding: 12px 1rem;
+    }
+    &__icon {
+      svg {
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+}
