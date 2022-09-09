@@ -1,20 +1,27 @@
 .offer {
-  min-height: 47.8125rem;
-  overflow-x: hidden;
   background-image: url('../../img/offer/offer-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  @include max-media(93.75em) {
+   overflow: hidden;
+  }
+  &__body {
+    padding: 141px 0 324px;
+  }
+
   &__container {
     height: 100%;
+
   }
   .descr-block {
     background-color: var(--clr-white);
     box-shadow: 5.274515628814697px 5.274515628814697px 26.372577667236328px 0px hsla(0, 0%, 0%, 0.13);
     max-width: 53.375rem;
-    margin-top: 3.8125rem;
     padding: 35px 42px;
+    position: relative;
+    z-index: 1;
     &__heading {
       font-size: clamp(15px, 2.5vw, 40px);
       font-weight: 700;
@@ -39,16 +46,47 @@
     }
   }
   &__image {
-    right: 0;
-    top: -25rem;
-    width: max(77.6875vw, 20.9375rem);
     position: absolute;
-    display: flex;
-    justify-content: flex-end;
-
+    top: -11rem;
+    right: -3.5rem;
+    @include max-media(106.25em) {
+      right: -15rem;
+      top: -9.1rem;
+      max-width: 1200px;
+    }
+    @include max-media(93.75em) {
+      right: -20rem;
+    }
+    width: auto;
+    z-index: 10;
   }
-  &__customer-image {
-    width: max(43.125vw, 14.0625rem);
-    aspect-ratio:  1 / 1;
+}
+
+
+body {
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@include max-media(1100px) {
+  .offer {
+    &__body {
+      padding: 24px 0px 0px;
+    }
+    &__image {
+      max-width: 450px;
+      margin-inline: auto;
+      img,
+      picture {
+        width: 100%;
+      }
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .purchased {
   background: hsla(0, 0%, 100%, 1);
-  padding-top: 5.75rem;
+  padding: clamp(34px, 5.75vw, 92px) 0 clamp(35px, 5.1875vw, 83px);
   &__heading {
     font-size: clamp(17px, 2.8125vw, 45px);
     font-weight: 900;

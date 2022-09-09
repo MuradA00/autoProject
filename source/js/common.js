@@ -7,7 +7,15 @@ const paymentBreakpoint = window.matchMedia("(max-width: 550px)"),
       homeSourceImg = document.querySelector('.home__source-img'),
       mobMenu = document.querySelector('.mob-menu'),
       menu = document.querySelector('.m-menu'),
-      body = document.body;
+      body = document.body,
+      offerImg = document.querySelector('.offer__img'),
+      offerSource = document.querySelector('.offer__source'),
+      offerTabletBp = window.matchMedia('(max-width: 1100px)');
+
+if (offerTabletBp.matches === true) {
+  offerImg.src = 'img/offer/offer-image-mob.png';
+  offerSource.srcset = 'img/offer/offer-image-mob.webp';
+}
 
 selectorRow.addEventListener('click', function(e) {
 	const selectorItems = document.querySelectorAll('.selector-list__item');
@@ -58,3 +66,20 @@ tabs.forEach((tab) => {
     tab.classList.add("is-active");
   });
 });
+
+
+const acc = document.getElementsByClassName("media__visible");
+const icons = document.getElementsByClassName('faq-list__toggle')
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("_media-active-visible");
+    const panel = this.nextElementSibling;
+    if (panel.style.display === 'block'){
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
+};
