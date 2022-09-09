@@ -1,0 +1,53 @@
+.tabs {
+  background-image: url('../../img/tabs/tabs-bg.png');
+  &__heading {
+    font-size: clamp(15px, 2.5vw, 40px);
+    font-weight: 700;
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(25.5vw, 15rem) 1fr;
+    grid-gap: 8px;
+  }
+}
+
+.choose-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4px;
+  &__item {
+    background-color: var(--clr-white);
+    box-shadow: 5.274515628814697px 5.274515628814697px 26.372577667236328px 0px hsla(0, 0%, 0%, 0.13);
+    padding: 6px 15px;
+    min-height: 6.875rem;
+    display: grid;
+    align-items: center;
+  }
+  &__item-inner {
+    @include al-flex;
+    grid-gap: 2rem;
+  }
+  &__icon {
+    flex: 0 0 6.25rem;
+  }
+}
+
+.tabs-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: 3.5rem;
+  }
+  &__image {
+    flex: 0 0 auto;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+}
+
+.hideTab {
+  display: none;
+}
