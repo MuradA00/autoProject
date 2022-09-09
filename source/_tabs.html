@@ -12,9 +12,9 @@
       </p>
     </div>
     <div class="tabs__body">
-      <div class="tabs__choose">
-        <ul class="choose-list" id="tabs">
-          <li class="choose-list__item tab">
+      <div class="tabs__choose" >
+        <ul class="choose-list">
+          <li class=" choose-list__item is-active" data-role="tab" data-target="#credit">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/credit-auto 1.png" alt="tabs-icon">
@@ -24,53 +24,58 @@
               </div>
             </div>
           </li>
-          <li class="choose-list__item tab">
+          <li class="choose-list__item" data-role="tab" data-target="#avaria">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/broken-car.png" alt="tabs-icon">
               </div>
               <div class="choose-list__name">
-                В кредите, залоге или запрете
+                После
+                ДТП
               </div>
             </div>
           </li>
-          <li class="choose-list__item tab">
+          <li class="choose-list__item" data-role="tab" data-target="#retro">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/retro-car.png" alt="tabs-icon">
               </div>
               <div class="choose-list__name">
-                В кредите, залоге или запрете
+                Старый,
+                эксклюзивный
               </div>
             </div>
           </li>
-          <li class="choose-list__item tab">
+          <li class="choose-list__item" data-role="tab" data-target="#com">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/commercial-car.png" alt="tabs-icon">
               </div>
               <div class="choose-list__name">
-                В кредите, залоге или запрете
+                Коммерческий
+                транспорт (юр.лица)
               </div>
             </div>
           </li>
-          <li class="choose-list__item tab">
+          <li class="choose-list__item" data-role="tab" data-target="#disable">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/volvo5 1.png" alt="tabs-icon">
               </div>
               <div class="choose-list__name">
-                В кредите, залоге или запрете
+                Неисправный
+                автомобиль
               </div>
             </div>
           </li>
-          <li class="choose-list__item tab">
+          <li class="choose-list__item" data-role="tab" data-target="#no-doc">
             <div class="choose-list__item-inner">
               <div class="choose-list__icon">
                 <img src="img/tabs/no-doc-car.png" alt="tabs-icon">
               </div>
               <div class="choose-list__name">
-                В кредите, залоге или запрете
+                Без
+                документов
               </div>
             </div>
           </li>
@@ -78,40 +83,37 @@
       </div>
       <div class="tabs__content">
         <ul class="tabs-list">
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item live tab-panel is-active" id="credit">
             <div class="tabs-list__image">
-              <img src="img/tabs/credit-auto 2.png  " alt="tabs-content-image">
+              <img src="img/tabs/credit-auto 2.png" alt="tabs-content-image">
             </div>
             <div class="tabs-list__info">
               <p>
                 Выкупим Ваш автомобиль находящийся
-в кредите, залоге или запрете.
-
-Мы выплатим деньги Вам сразу после осмотра,
-а всеми вопросы займемся уже сами.
+                в кредите, залоге или запрете.
+              </p>
+              <p>
+                Мы выплатим деньги Вам сразу после осмотра,
+                а всеми вопросы займемся уже сами.
               </p>
             </div>
           </li>
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item tab tab-panel" id="avaria">
             <div class="tabs-list__image">
               <img src="img/tabs/prodat-bityj-avtomobil-2048x1560 3.png" alt="tabs-content-image">
             </div>
             <div class="tabs-list__info">
               <p>
-
                 Выкупим автомобиль после ДТП, транспортировка за наш счет.
-
               </p>
               <p>
 
-Выкупим автомобиль после ДТП, транспортировка за наш счет.
-
-Мы выплатим деньги Вам сразу после осмотра,
-а всеми вопросы займемся уже сами.
+            Мы выплатим деньги Вам сразу после осмотра,
+            а всеми вопросы займемся уже сами.
               </p>
             </div>
           </li>
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item tab tab-panel" id="retro">
             <div class="tabs-list__image">
               <img src="img/tabs/24-248517_retro-car-png-clip-art-old-car-png 4.png" alt="tabs-content-image">
             </div>
@@ -121,13 +123,12 @@
                 транспортировка за наш счет.
               </p>
               <p>
-
                 Мы выплатим деньги Вам сразу после осмотра,
                 а всеми вопросы займемся уже сами.
               </p>
             </div>
           </li>
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item tab tab-panel" id="com">
             <div class="tabs-list__image">
               <img src="img/tabs/9c7d9bc1b6b21df0b97770a235857dfbx 5.png" alt="tabs-content-image">
             </div>
@@ -141,7 +142,7 @@
               </p>
             </div>
           </li>
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item tab tab-panel" id="disable">
             <div class="tabs-list__image">
               <img src="img/tabs/volvo5 6.png" alt="tabs-content-image">
             </div>
@@ -155,7 +156,7 @@
               </p>
             </div>
           </li>
-          <li class="tabs-list__item tabContent">
+          <li class="tabs-list__item tab tab-panel" id="no-doc">
             <div class="tabs-list__image">
               <img src="img/tabs/original_6006b3bf58f9401cbf488b0b_60b2f764c3ad0 8.png" alt="tabs-content-image">
             </div>
@@ -170,6 +171,52 @@
             </div>
           </li>
         </ul>
+        <form action="post" class="form _desktop-form">
+          <div class="form__inner">
+            <div class="form__heading">
+              Отправьте заявку прямо сейчас, и получите
+              реальную стоимость Вашего автомобиля,
+              Дороже чем в Trade-In!
+            </div>
+            <div class="form__input-block">
+              <div class="input-block">
+                <div class="input-block__input">
+                  <input type="text" placeholder="+79 000 000 000">
+                </div>
+                <div class="input-block__button">
+                  <button type="submit" class="input-block__request _def-btn">
+                    Узнать цену
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="form__info">
+              <p>
+                *Нажимая на кнопку, вы даете согласие на обработку своих персональных
+                данных и соглашаетесь с Политикой конфиденциальности
+              </p>
+            </div>
+          </div>
+          <div class="form__social">
+            <ul class="header-social">
+              <li class="header-social__item">
+                <a href="#" class="header-social__link">
+                  <img src="img/header/viber (2) 1.png" alt="viber-icon">
+                </a>
+              </li>
+              <li class="header-social__item">
+                <a href="#" class="header-social__link">
+                  <img src="img/header/whatsapp (1) 1.png" alt="wu-icon">
+                </a>
+              </li>
+              <li class="header-social__item">
+                <a href="#" class="header-social__link">
+                  <img src="img/header/telegram (2) 1.png" alt="tg-icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </form>
       </div>
     </div>
   </div>
