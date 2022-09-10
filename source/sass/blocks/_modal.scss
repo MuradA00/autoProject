@@ -1,0 +1,92 @@
+.modal {
+  background-color: hsla(0, 0%, 0%, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: all;
+  transition: opacity 400ms ease-in-out;
+  visibility: hidden;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__heading {
+    color: var(--clr-black);
+    font-weight: 700;
+    max-width: 42.875rem;
+    margin-inline: auto;
+    font-size: clamp(25px, 2.5vw, 40px);
+    text-align: center;
+    line-height: 120%;
+    span {
+      color: var(--clr-red);
+    }
+  }
+  &__close {
+    font-weight: 700;
+    color: var(--clr-red);
+    font-size: 2rem;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+  }
+  &__wrapper {
+    padding: clamp(25px, 4.375vw, 70px) clamp(17px, 4.875vw, 78px) clamp(25px, 3.4375vw, 55px);
+    max-width: 67.125rem;
+    background-color: var(--clr-white);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: opacity 500ms ease, transform .5s ease;
+    transition-delay: 400ms;
+    max-height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+    input {
+      box-shadow: 5px 5px 20px 0px hsla(0, 0%, 0%, 0.25) inset;
+      padding: clamp(1rem, 2vw, 2rem) clamp(20px, 2.8125vw, 45px);
+      &::placeholder {
+        color: hsla(0, 0%, 0%, 0.6);
+        font-size: clamp(15px, 1.5vw, 24px);
+      }
+    }
+  }
+}
+
+@include max-media(56.25em) {
+  .modal {
+    &__button {
+      padding: 1rem;
+    }
+    &__heading {
+      font-size: 18px;
+      margin-bottom: 2rem;
+    }
+    &__close {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+
+.--show-modal {
+
+    opacity: 1;
+    visibility: visible;
+    .modal__wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+}

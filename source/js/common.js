@@ -83,3 +83,21 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 };
+
+const modalTriggers = document.querySelectorAll('.trigger-modal')
+const modal = document.getElementById('modal')
+const closeIcon = document.querySelector('.modal__close')
+
+for(let i = 0; i < modalTriggers.length; i++) {
+  const modalButton = modalTriggers[i];
+  modalButton.addEventListener('click', function() {
+    modal.classList.add('--show-modal')
+  })
+  closeIcon.addEventListener('click', () => {
+    closeModal();
+  })
+}
+
+function closeModal() {
+  modal.classList.remove('--show-modal')
+}

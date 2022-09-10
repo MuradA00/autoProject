@@ -21,6 +21,7 @@
   &__offer {
     font-size: clamp(15px, 2.3125vw, 37px);
     font-weight: 900;
+    margin-top: 40px;
     span {
       color: var(--clr-red);
     }
@@ -30,9 +31,18 @@
     grid-template-columns: 0.75fr .9fr;
     grid-gap: 3px;
   }
+  ._mob-offer { display: none;}
 }
 
 @include max-media(53.125em) {
+  ._desktop-offer {
+    display: none;
+  }
+  ._mob-offer {
+    margin-top: 0;
+    display: block !important;
+    text-align: center;
+  }
   .express {
     &__container {
       max-width: 37.5rem;
