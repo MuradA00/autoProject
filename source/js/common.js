@@ -10,7 +10,9 @@ const paymentBreakpoint = window.matchMedia("(max-width: 550px)"),
       body = document.body,
       offerImg = document.querySelector('.offer__img'),
       offerSource = document.querySelector('.offer__source'),
-      offerTabletBp = window.matchMedia('(max-width: 1100px)');
+      offerTabletBp = window.matchMedia('(max-width: 1100px)'),
+      carsList = document.querySelector('.cars-list'),
+      showMoreBtn = document.querySelector('.purchased__button');
 
 if (offerTabletBp.matches === true) {
   offerImg.src = 'img/offer/offer-image-mob.png';
@@ -101,3 +103,7 @@ for(let i = 0; i < modalTriggers.length; i++) {
 function closeModal() {
   modal.classList.remove('--show-modal')
 }
+
+showMoreBtn.addEventListener('click', () => {
+  carsList.classList.toggle('_show-more-cars')
+})

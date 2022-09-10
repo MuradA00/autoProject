@@ -33,6 +33,16 @@
   }
 }
 
+.hidden-car {
+  display: none;
+}
+
+._show-more-cars {
+  .hidden-car {
+    display: block;
+  }
+}
+
 
 
 

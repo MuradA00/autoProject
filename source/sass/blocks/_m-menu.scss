@@ -63,3 +63,20 @@
   transform: translateX(0);
   opacity: 1;
 }
+
+._burger-active {
+  span {
+    display: none;
+  }
+  img {
+    display: block !important;
+  }
+}
+
+.mob-menu {
+  position: relative;
+  display: flex;
+  img {
+    display: none;
+  }
+}

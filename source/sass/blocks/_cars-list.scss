@@ -6,6 +6,7 @@
   &__item {
     box-shadow: 5px 5px 50px 0px hsla(0, 0%, 0%, 0.14);
     padding: max(1.6875vw, 14px) clamp(13px, 1.625vw, 26px) clamp(18px, 2.1875vw, 35px);
+
   }
   &__name {
     margin-top: max(1.5vw, 12.5px);
