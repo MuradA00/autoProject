@@ -21,7 +21,7 @@
     margin-bottom: clamp(20px, 3.125vw, 60px);
     color: var(--clr-black);
     font-weight: 700;
-    max-width: 42.875rem;
+    max-width: 43.875rem;
     margin-inline: auto;
     font-size: clamp(25px, 2.5vw, 40px);
     text-align: center;
@@ -63,6 +63,7 @@
     input {
       box-shadow: 5px 5px 20px 0px hsla(0, 0%, 0%, 0.25) inset;
       padding: clamp(1rem, 2vw, 2rem) clamp(20px, 2.8125vw, 45px);
+      font-size: clamp(15px, 1.5vw, 24px);
       &::placeholder {
         color: hsla(0, 0%, 0%, 0.6);
         font-size: clamp(15px, 1.5vw, 24px);
@@ -97,6 +98,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+}
 
-
+@include max-media(800px) {
+  .modal {
+    &__button {
+      font-size: 1rem;
+    }
+  }
 }
