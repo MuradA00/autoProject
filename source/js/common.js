@@ -12,7 +12,7 @@ const paymentBreakpoint = window.matchMedia("(max-width: 550px)"),
       offerSource = document.querySelector('.offer__source'),
       offerTabletBp = window.matchMedia('(max-width: 1100px)'),
       carsList = document.querySelector('.cars-list'),
-      showMoreBtn = document.querySelector('.purchased__button');
+      showMoreBtn = document.querySelector('.-more-btn');
 
 if (offerTabletBp.matches === true) {
   offerImg.src = 'img/offer/offer-image-mob.png';
@@ -89,21 +89,52 @@ for (i = 0; i < acc.length; i++) {
 const modalTriggers = document.querySelectorAll('.trigger-modal')
 const modal = document.getElementById('modal')
 const closeIcon = document.querySelector('.modal__close')
+const navMobLinks = document.querySelectorAll('.menu-list__link');
 
 for(let i = 0; i < modalTriggers.length; i++) {
   const modalButton = modalTriggers[i];
-  modalButton.addEventListener('click', function() {
+  modalButton.addEventListener('click', function(e) {
     modal.classList.add('--show-modal')
+    e.preventDefault();
   })
   closeIcon.addEventListener('click', () => {
     closeModal();
   })
 }
 
+for(let i = 0; i < navMobLinks.length; i++) {
+  const navMobLink = navMobLinks[i];
+  navMobLink.addEventListener('click', () => {
+    closeMenu();
+  })
+}
+
+function closeMenu() {
+  menu.classList.remove('--menu-active')
+  body.style.overflow = 'visible';
+  mobMenu.classList.remove('_burger-active');
+};
+
 function closeModal() {
   modal.classList.remove('--show-modal')
+
 }
 
 showMoreBtn.addEventListener('click', () => {
   carsList.classList.toggle('_show-more-cars')
+  if (showMoreBtn.innerHTML === 'Показать меньше машин') {
+    showMoreBtn.innerHTML = 'Показать больше машин'
+  } else {
+    showMoreBtn.innerHTML = 'Показать меньше машин'
+  }
 })
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});

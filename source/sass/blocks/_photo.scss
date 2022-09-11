@@ -10,7 +10,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    width: max(58.8vw, 25rem);
+    max-width: 57.125rem;
     margin-left: auto;
     position: relative;
     z-index: 200;
@@ -36,7 +36,6 @@
     bottom: 0;
     left: 0;
     z-index: 100;
-    width: max(48.125vw, 30rem);
     img, picture {
       height: 100%;
     }
